@@ -3,6 +3,59 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        title The alphabet of the 21st
+        link(rel="stylesheet", href="./style/style.css")
+        script(src="./script/script.js" defer)
+
     body
-        p This is just a template.
+        mixin bar()
+            .bar
+                img(src="img/gif/bar.gif", alt="Bar")
+                img(src="img/gif/bar.gif", alt="Bar")
+
+        h1.red: b
+            | _____ MEME ALPHABET 
+            img(src="img/gif/computer_tv_head_md_wht.gif" alt="Computer TV Head")
+            |  _____
+
+        .marquee-container
+            p.marquee-content.purple
+                i the best alphabet for kids in da 21st centuriez.
+
+        center: img(src="img/gif/barraconstruction.gif", alt="Site under construction")
+
+        p: u please select a lettr to began.
+        label(for="disable_animation")
+            input#disable_animation(type="checkbox", name="disable_animation")
+            span disable animations
+
+        +bar()
+        .pages#letter_container
+        .pages.hidden#letter_display
+            button.transparent_button#back_button
+                img(src="img/gif/back2.gif", alt="Back")
+            .wrapper
+                .image
+                    img(src="img/letters/letter-a.gif", alt="Bar")
+                .audio
+                    h2 this iz the lettr #[span.blink_text $_letter]
+                    p audio samples:
+                    #audio_samples
+
+                .text
+                    p ipa: #[span.blink_text $_ipa]
+                    p informationz: $_informations
+                    p examplez:
+                    ul#letter_examples
+                    p images:
+                    #image_examples
+        +bar()
+
+        footer
+            p this website is, and will NOT be optimized for mobile user or user with screen smallr than 1200px
+            p credits:
+            ul
+                li #[a(href="https://gifcities.org") gifcities] and #[a(href="https://tenor.com") tenor] for the gifs
+                li #[a(href="https://knowyourmeme.com") knowyourmeme], #[a(href="https://www.youtube.com/@LIMC") limc] and #[a(href="https://wikipedia.org") wikipedia] for information about meme
+                li da internet for sauces of examplez image and audio
+            p sauce code avaliable on github, please contribute to expand the examples, "improve" the sites, and update on the latest memes
